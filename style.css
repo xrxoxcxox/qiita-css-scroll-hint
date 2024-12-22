@@ -20,7 +20,13 @@ body {
   flex-grow: 1;
   gap: 1rem;
   padding: 2rem;
-  width: min(100%, 480px);
+  width: min(100%, 960px);
+}
+
+.layout {
+  align-items: flex-start;
+  display: flex;
+  gap: 1rem;
 }
 
 @property --gradient-color {
@@ -30,16 +36,16 @@ body {
 }
 
 .section {
+  animation: scrolling forwards;
+  animation-timeline: scroll(self);
   background-color: #fff;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
   max-height: 480px;
   overflow: auto;
-  animation: scrolling forwards;
-  animation-timeline: scroll(self);
+  padding: 1rem;
 }
 
 @keyframes scrolling {
